@@ -3,7 +3,10 @@
     <img
       alt="Vue logo"
       src="../assets/logo.png">
-    <Chat @emitClickChatSend="sendChat" />
+    <Chat
+      :messages="messages"
+      @emitClickChatSend="sendChat"
+      />
   </div>
 </template>
 
@@ -19,8 +22,11 @@ import Chat from '@/components/Chat.vue';
   },
 })
 export default class Home extends Vue {
+  protected messages: string[] = [];
+
   protected sendChat(chat: string): void {
-    alert(chat);
+    // TODO API call here!
+    this.messages.push(chat);
   }
 }
 </script>

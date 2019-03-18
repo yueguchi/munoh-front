@@ -38,7 +38,6 @@ export default class Chat extends Vue {
     if (!chat) {
       return;
     }
-    this.messages.push(chat);
     this.$emit('emitClickChatSend', chat);
     this.chat = '';
   }
