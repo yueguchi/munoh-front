@@ -14,6 +14,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from '@/components/HelloWorld.vue';
 import Chat from '@/components/Chat.vue';
+import { ChatApi } from '@/libs/api';
 
 @Component({
   components: {
@@ -24,9 +25,11 @@ import Chat from '@/components/Chat.vue';
 export default class Home extends Vue {
   protected messages: string[] = [];
 
-  protected sendChat(chat: string): void {
-    // TODO API call here!
+  protected async sendChat(chat: string): Promise<any> {
     this.messages.push(chat);
+    const chatApi = new ChatApi(chat);
+    const { data } = await chatApi.getRepl();
+    this.messages.push(data.message);
   }
 }
 </script>
