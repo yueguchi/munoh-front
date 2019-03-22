@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" ref="home">
     <Chat
       :messages="messages"
       @emitClickChatSend="sendChat"

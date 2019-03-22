@@ -52,7 +52,10 @@ export default class Chat extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .chat {
+  height: 100vh;
   .chat-section {
+    height: 90%;
+    overflow-y: scroll;
     .__message-area {
       &:nth-child(odd) {
         text-align: right;
