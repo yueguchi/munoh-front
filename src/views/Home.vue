@@ -11,7 +11,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from '@/components/HelloWorld.vue';
 import Chat from '@/components/Chat.vue';
-import { ChatApi } from '@/libs/api';
+import { ChatApi } from '@/libs/api/ChatApi';
 
 @Component({
   components: {
@@ -20,7 +20,7 @@ import { ChatApi } from '@/libs/api';
   },
 })
 export default class Home extends Vue {
-  protected messages: string[] = [];
+  private messages: string[] = [];
 
   protected async sendChat(chat: string): Promise<any> {
     this.messages.push(chat);

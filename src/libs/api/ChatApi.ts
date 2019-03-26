@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { URL_CHAT_API } from '@/libs/consts';
+import { Consts } from '@/libs/Consts';
 
 export class ChatApi {
   private chat: string;
@@ -8,6 +8,6 @@ export class ChatApi {
   }
 
   public async getRepl(): Promise<any> {
-    return axios.get(`${URL_CHAT_API}?word=${this.chat}`);
+    return axios.get(`${Consts.URL_CHAT_API}?word=${this.chat}`);
   }
 }
