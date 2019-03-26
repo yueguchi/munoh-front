@@ -9,15 +9,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue';
 import Chat from '@/components/Chat.vue';
 import { ChatApi } from '@/libs/api/ChatApi';
 
 @Component({
-  components: {
-    HelloWorld,
-    Chat,
-  },
+  components: { Chat },
 })
 export default class Home extends Vue {
   private messages: string[] = [];
