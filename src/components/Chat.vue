@@ -66,9 +66,10 @@ export default class Chat extends Vue {
           display: inline-block;
           border: solid 1px white;
           border-radius: 30px;
-          color: #555;
+          color: black;
           font-size: 16px;
-          background: #fffbf4;
+          font-weight: bold;
+          background: #f7ad00;
           padding: 10px;
           text-align: left;
         }
@@ -80,10 +81,11 @@ export default class Chat extends Vue {
         .__message {
           position: relative;
           display: inline-block;
-          border: solid 1px white;
+          border: solid 1px black;
           border-radius: 30px;
           color: #555;
           font-size: 16px;
+          font-weight: bold;
           background: #e0edff;
           padding: 10px;
           text-align: left;
@@ -100,9 +102,20 @@ export default class Chat extends Vue {
       display: flex;
       .__chat-input {
         width: 80%;
+        border: solid 2px black;
+        border-radius: 25px;
+        padding: 10px;
+        font-size: 12px;
       }
       .__chat-send-btn {
         width: 20%;
+        height: 50px;
+        border: dotted 1px;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 1px;
+        background-color: #1f981e;
+        color: #fff;
       }
     }
   }

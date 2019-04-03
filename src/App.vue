@@ -7,5 +7,7 @@
 <style lang="scss">
 body {
   background: #fff;
+  margin: 0;
+  padding: 0;
 }
 </style>
