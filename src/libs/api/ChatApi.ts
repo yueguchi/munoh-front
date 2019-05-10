@@ -11,6 +11,6 @@ export class ChatApi {
   }
 
   public async getRepl(): Promise<any> {
-    return axios.get(`${Consts.URL_CHAT_API}?word=${this.chat}`);
+    return axios.get(`${Consts.URL_CHAT_API}/${this.chat}`);
   }
 }

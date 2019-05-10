@@ -22,7 +22,7 @@ export default class Home extends Vue {
     this.messages.push(chat);
     const chatApi = new ChatApi(chat);
     const { data } = await chatApi.getRepl();
-    this.messages.push(data.message);
+    this.messages.push(data._word);
   }
 }
 </script>
